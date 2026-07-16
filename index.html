@@ -4,17 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- ============================================================
-  PENCIL & PROMPT — DEFINITION PAGE (public)
-  · File must stay named index.html
-  · Domain-agnostic: no absolute self-links, no canonical tag —
-    binding a custom domain later requires ZERO edits here.
-  · WEEKLY UPDATE (every Thursday, after the long-form is live):
-    1) add one <tr> to the Fix List table (marked below)
-    2) update the "Current record" line + "Current target" box
-    3) update the <time> in the footer
+  PENCIL & PROMPT — DEFINITION PAGE + WORK ARCHIVE (public)
+  · File must stay named index.html · artwork photos live in images/
+    named w005.jpg … w010.jpg (lowercase)
+
+  MIGRATION MAP (moving to your own domain later = 2 find-replaces):
+  · Gumroad product links all share the base
+        https://pencilprompt.gumroad.com/l/
+    → replace-all with your own shop base (e.g. https://yourdomain.com/shop/)
+    Product slugs (005, 006 …) stay identical.
+  · Gumroad storefront home
+        https://pencilprompt.gumroad.com
+    → replace-all with your shop home.
+  · YouTube links and images/ paths never change.
+  All links are static HTML (no JS injection) — AI crawlers read them.
+
+  WEEKLY UPDATE (every Thursday, after the long-form is live):
+  1) add the new week's <article class="work"> at the TOP of the archive
+  2) drop the finished-portrait photo into images/ as wNNN.jpg
+  3) update the "Current record" line + "Current target" box
+  4) update the <time> in the footer
   ============================================================ -->
 <title>What Is the AI Loop Method? — AI-Graded Colored Pencil Drawing | Pencil &amp; Prompt</title>
-<meta name="description" content="The AI Loop Method: an AI designs a weekly colored pencil lesson, a human draws it by hand, and the finished portrait goes back to the AI for a graded verdict — HIT or MISS. A public, week-by-week experiment running since May 2026.">
+<meta name="description" content="The AI Loop Method: an AI designs a weekly colored pencil lesson, a human draws it by hand, and the finished portrait goes back to the AI for a graded verdict — HIT or MISS. Every portrait and every verdict, on record since May 2026.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -22,8 +34,7 @@
     {
       "@type": "DefinedTerm",
       "name": "AI Loop Method",
-      "description": "A drawing-practice method in which an AI designs a weekly colored pencil lesson, a human executes it by hand, and the finished drawing is returned to the AI for a graded verdict (HIT or MISS); the next lesson targets exactly what the critique found.",
-      "url": ""
+      "description": "A drawing-practice method in which an AI designs a weekly colored pencil lesson, a human executes it by hand, and the finished drawing is returned to the AI for a graded verdict (HIT or MISS); the next lesson targets exactly what the critique found."
     },
     {
       "@type": "FAQPage",
@@ -51,29 +62,59 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: Georgia, 'Times New Roman', serif; background: #faf8f4; color: #1d1d1b; line-height: 1.75; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 40px; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 52px 24px 40px; }
   .kicker { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c96a1b; margin-bottom: 14px; }
-  h1 { font-size: 34px; line-height: 1.25; margin-bottom: 22px; color: #111; }
-  .lede { font-size: 19px; line-height: 1.7; color: #2a2a26; margin-bottom: 10px; }
-  .since { font-family: -apple-system, sans-serif; font-size: 13px; color: #8a857c; margin-bottom: 36px; }
-  h2 { font-size: 22px; margin: 44px 0 14px; color: #111; }
-  p { font-size: 16px; margin-bottom: 14px; }
-  ol.steps { counter-reset: s; list-style: none; margin: 18px 0 8px; }
-  ol.steps li { position: relative; padding: 0 0 18px 52px; font-size: 16px; }
-  ol.steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 2px; width: 34px; height: 34px; border: 2px solid #c96a1b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: -apple-system, sans-serif; font-weight: 700; font-size: 15px; color: #c96a1b; }
-  ol.steps li strong { display: block; font-family: -apple-system, sans-serif; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: #111; margin-bottom: 2px; }
-  table { width: 100%; border-collapse: collapse; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13.5px; margin: 18px 0 10px; }
-  th { text-align: left; padding: 9px 10px; border-bottom: 2px solid #1d1d1b; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #555; }
-  td { padding: 11px 10px; border-bottom: 1px solid #e2ddd3; vertical-align: top; color: #2a2a26; }
-  .wk { font-weight: 700; white-space: nowrap; }
-  .hit { color: #1e7a34; font-weight: 700; }
-  .pre { color: #8a857c; }
-  .record { font-family: -apple-system, sans-serif; font-size: 14px; background: #f1ede4; border-left: 4px solid #c96a1b; padding: 12px 16px; margin: 14px 0; }
-  .target { font-family: -apple-system, sans-serif; font-size: 14px; background: #101010; color: #f2efe8; padding: 14px 18px; border-radius: 6px; margin: 10px 0 4px; }
+  h1 { font-size: 32px; line-height: 1.25; margin-bottom: 20px; color: #111; }
+  .lede { font-size: 18px; line-height: 1.7; color: #2a2a26; margin-bottom: 10px; }
+  .since { font-family: -apple-system, sans-serif; font-size: 13px; color: #8a857c; margin-bottom: 32px; }
+  h2 { font-size: 21px; margin: 40px 0 12px; color: #111; }
+  p { font-size: 15.5px; margin-bottom: 13px; }
+  ol.steps { counter-reset: s; list-style: none; margin: 16px 0 6px; }
+  ol.steps li { position: relative; padding: 0 0 13px 48px; font-size: 15px; }
+  ol.steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; border: 2px solid #c96a1b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: -apple-system, sans-serif; font-weight: 700; font-size: 14px; color: #c96a1b; }
+  ol.steps li strong { font-family: -apple-system, sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #111; margin-right: 6px; }
+
+  /* ---- compact archive cards ---- */
+  .work { display: flex; gap: 0; background: #fff; border: 1px solid #e6e0d4; border-radius: 10px; overflow: hidden; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .thumb { flex: 0 0 150px; display: block; background: #131311; }
+  .thumb img { width: 150px; height: 100%; min-height: 100%; object-fit: cover; display: block; }
+  .work-body { padding: 16px 20px 16px; flex: 1; min-width: 0; }
+  .work-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin-bottom: 7px; }
+  .wk { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #c96a1b; }
+  .subj { font-size: 16px; font-weight: 700; color: #111; }
+  .verdict { display: inline-block; font-family: -apple-system, sans-serif; font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; }
+  .verdict.hit { background: #113311; color: #7ee38b; }
+  .verdict.catch { background: #113311; color: #7ee38b; box-shadow: inset 0 0 0 1px #b98a2c; }
+  .verdict.pre { background: #efe9dc; color: #7a7468; }
+  .graded { font-family: -apple-system, sans-serif; font-size: 12.5px; color: #7a7468; margin-bottom: 6px; }
+  .graded b { color: #3a3a35; }
+  .caption { font-size: 14.5px; line-height: 1.6; color: #2a2a26; margin-bottom: 10px; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; font-family: -apple-system, sans-serif; }
+  .links a { display: inline-block; font-size: 12px; font-weight: 700; text-decoration: none; padding: 6px 12px; border-radius: 5px; }
+  .links a.yt { background: #111; color: #fff; }
+  .links a.pdf { background: transparent; color: #c96a1b; border: 1.5px solid #c96a1b; }
+  @media (max-width: 560px) {
+    .work { flex-direction: column; }
+    .thumb, .thumb img { width: 100%; flex-basis: auto; }
+    .thumb img { height: 230px; object-fit: cover; }
+  }
+
+  .record { font-family: -apple-system, sans-serif; font-size: 14px; background: #f1ede4; border-left: 4px solid #c96a1b; padding: 11px 15px; margin: 12px 0; }
+  .target { font-family: -apple-system, sans-serif; font-size: 14px; background: #101010; color: #f2efe8; padding: 13px 17px; border-radius: 6px; margin: 8px 0 4px; }
   .target b { color: #f0a04a; }
-  .faq h3 { font-size: 17px; margin: 26px 0 8px; color: #111; }
+  .prevwork { background: #fff; border: 1px solid #e6e0d4; border-radius: 10px; padding: 16px 20px 18px; margin-bottom: 16px; }
+  .prevwork h3 { font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #7a7468; margin-bottom: 4px; }
+  .prevwork p { font-family: -apple-system, sans-serif; font-size: 12.5px; color: #8a857c; margin-bottom: 12px; }
+  .prevgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .prevgrid a { display: block; border-radius: 6px; overflow: hidden; background: #131311; }
+  .prevgrid img { width: 100%; aspect-ratio: 1 / 1.2; object-fit: cover; display: block; }
+  @media (max-width: 560px) { .prevgrid { grid-template-columns: repeat(3, 1fr); } }
+  .drawalong { background: #fff; border: 1px solid #e6e0d4; border-radius: 10px; padding: 18px 22px; margin: 30px 0 4px; }
+  .drawalong p { font-size: 14.5px; margin-bottom: 6px; }
+  .drawalong .small { font-family: -apple-system, sans-serif; font-size: 12.5px; color: #8a857c; margin-bottom: 0; }
+  .faq h3 { font-size: 16px; margin: 22px 0 6px; color: #111; }
   a { color: #c96a1b; }
-  .footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid #e2ddd3; font-family: -apple-system, sans-serif; font-size: 13px; color: #8a857c; }
+  .footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid #e2ddd3; font-family: -apple-system, sans-serif; font-size: 12.5px; color: #8a857c; }
 </style>
 </head>
 <body>
@@ -93,52 +134,109 @@
     <li><strong>Loop</strong>Next week's lesson is built from exactly what the critique found.</li>
   </ol>
 
-  <h2>The Fix List — every week on record</h2>
-  <p>Weeks 1–4 were pre-method groundwork (no celebrity subjects, no grading). The loop record starts at week 5. Binary HIT/MISS verdicts were formalized in week 9; earlier weeks show the critique's own outcome language.</p>
-
-  <table>
-    <thead>
-      <tr><th>Week</th><th>Subject</th><th>The target it was graded on</th><th>Outcome</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="wk">5</td><td>Kylian Mbappé</td>
-        <td>Baseline — first graded portrait</td>
-        <td class="pre">First fix list: shadows too heavy, skin patchy, stubble a flat mass</td>
-      </tr>
-      <tr>
-        <td class="wk">6</td><td>Jalen Brunson</td>
-        <td>Cool the darks, unify the skin</td>
-        <td class="pre">Partial — skin more unified, but the darks overshot from too hot to too grey</td>
-      </tr>
-      <tr>
-        <td class="wk">7</td><td>Lionel Messi</td>
-        <td>Warm-but-controlled darks; beard density gradient</td>
-        <td class="pre">Two threads landed — beard fixed, darks hit the warm middle; new flaw found: the shadow side flattens</td>
-      </tr>
-      <tr>
-        <td class="wk">8</td><td>Cristiano Ronaldo</td>
-        <td>Turn the shadow side as convincingly as the lit side</td>
-        <td class="pre">Partial — the structure held on an ambitious upward angle, but skin patchiness persisted</td>
-      </tr>
-      <tr>
-        <td class="wk">9</td><td>Lamine Yamal</td>
-        <td>Turn the away-side plane (carry-forward from week 8)</td>
-        <td class="hit">HIT — with one catch: the plane finally turns, but overcorrected cool and heavy</td>
-      </tr>
-      <tr>
-        <td class="wk">10</td><td>Taylor Swift</td>
-        <td>Warm, controlled mid-value shadows; warm lip base</td>
-        <td class="hit">HIT — the week-5 skin-patchiness thread ruled closed; most unified skin of the series</td>
-      </tr>
-      <!-- ⬇️ WEEKLY UPDATE: add the new week's <tr> here (below the newest row).
-           Then update the "Current record" line and the "Current target" box below. -->
-    </tbody>
-  </table>
-
   <div class="record"><strong>Current record:</strong> 6 graded portraits · since binary verdicts began (week 9): <strong>2 rulings, 2 HITs</strong>.</div>
-
   <div class="target"><b>Current target (week 11):</b> push the lit planes — forehead, nose bridge, cheekbone — to a true peak highlight, and add gentle core shadows, so a softly lit face reads sculpted instead of flat.</div>
+
+  <h2>The Fix List — every portrait, every verdict</h2>
+  <p>Weeks 1–4 were pre-method groundwork. The loop record starts at week 5, newest first. Binary HIT/MISS verdicts were formalized in week 9. Click any portrait to see it full size.</p>
+
+  <!-- ⬇️ WEEKLY UPDATE: add the new week's <article class="work"> HERE (newest stays on top). -->
+
+  <article class="work">
+    <a class="thumb" href="images/w010.jpg"><img src="images/w010.jpg" alt="Colored pencil portrait of Taylor Swift, drawn by hand following an AI-designed lesson — week 10 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 10</span><span class="subj">Taylor Swift</span><span class="verdict hit">HIT</span></div>
+      <div class="graded"><b>Graded on:</b> warm, controlled mid-value shadows + a warm lip base.</div>
+      <p class="caption">The patchy-skin fight I'd been losing since week 5 is finally over — the AI ruled the thread closed, the most unified skin of the series. Then it immediately found the next thing: the face is unified now, but it reads flat.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/-j9HCB-f6rU">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/010">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w009.jpg"><img src="images/w009.jpg" alt="Colored pencil portrait of Lamine Yamal in a Barcelona jersey, drawn by hand following an AI-designed lesson — week 9 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 9</span><span class="subj">Lamine Yamal</span><span class="verdict catch">HIT — with one catch</span></div>
+      <div class="graded"><b>Graded on:</b> turning the away-side plane of the face.</div>
+      <p class="caption">The away side of the face finally turns — the thing I'd missed two weeks running. It also went grey and heavy doing it. Hit the target, paid a price. Best curly hair I've ever rendered, though.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/loZqy82I3sE">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/009">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w008.jpg"><img src="images/w008.jpg" alt="Colored pencil portrait of Cristiano Ronaldo in a Portugal jersey, drawn by hand following an AI-designed lesson — week 8 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 8</span><span class="subj">Cristiano Ronaldo</span><span class="verdict pre">Partial — pre-verdict era</span></div>
+      <div class="graded"><b>Graded on:</b> turning the shadow side as convincingly as the lit side.</div>
+      <p class="caption">Most ambitious angle yet — an upward three-quarter — and the likeness survived it. The skin didn't: patchiness three weeks running, and the AI called it out as the standing thread.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/zlaIKhzQjVY">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/008">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w007.jpg"><img src="images/w007.jpg" alt="Colored pencil portrait of Lionel Messi smiling in a Barcelona jersey, drawn by hand following an AI-designed lesson — week 7 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 7</span><span class="subj">Lionel Messi</span><span class="verdict pre">Two threads landed — pre-verdict era</span></div>
+      <div class="graded"><b>Graded on:</b> warm-but-controlled darks + beard density gradient.</div>
+      <p class="caption">Two fixes landed at once: the beard finally grows out of the skin instead of sitting on it, and the darks hit the warm middle after two weeks of swinging. Then the AI found the shadow side flattening. There's always a next thing — that's the point.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/hsGLwaCygXk">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/007">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w006.jpg"><img src="images/w006.jpg" alt="Colored pencil portrait of Jalen Brunson with braids and beard in a Knicks jersey, drawn by hand following an AI-designed lesson — week 6 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 6</span><span class="subj">Jalen Brunson</span><span class="verdict pre">Partial — pre-verdict era</span></div>
+      <div class="graded"><b>Graded on:</b> cooling the darks + unifying the skin.</div>
+      <p class="caption">Fixed the too-hot darks by overshooting straight into grey. The dial has two directions and I found both. Skin did come out more unified than week 5 — real progress hiding inside a miss.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/B2_pxMQ2V6k">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/006">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w005.jpg"><img src="images/w005.jpg" alt="Colored pencil portrait of Kylian Mbappé in a France jersey, drawn by hand following an AI-designed lesson — week 5 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 5</span><span class="subj">Kylian Mbappé</span><span class="verdict pre">Baseline — first graded portrait</span></div>
+      <div class="graded"><b>Graded on:</b> nothing yet — this is where the record starts.</div>
+      <p class="caption">The first portrait ever put in front of the AI for grading. Its first fix list was long: shadows too heavy, skin patchy, stubble a flat dark mass. Everything above this card is the story of working through that list.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/oO1beUD7OEk">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/005">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <div class="prevwork">
+    <h3>Previous work — before the loop</h3>
+    <p>Weeks 1–4 and early one-off portraits, drawn before the grading began. Where the record above started from. Click to view full size.</p>
+    <div class="prevgrid">
+      <a href="images/w001.jpg"><img src="images/w001.jpg" alt="Early colored pencil portrait, week 1 — drawn before AI grading began" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/w002.jpg"><img src="images/w002.jpg" alt="Early colored pencil portrait, week 2 — drawn before AI grading began" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/w003.jpg"><img src="images/w003.jpg" alt="Early colored pencil portrait, week 3 — drawn before AI grading began" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/w004.jpg"><img src="images/w004.jpg" alt="Early colored pencil portrait, week 4 — drawn before AI grading began" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/natejacob.jpg"><img src="images/natejacob.jpg" alt="Colored pencil portrait of Nate Jacobs — early pre-method work" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/elonmusk.jpg"><img src="images/elonmusk.jpg" alt="Colored pencil portrait of Elon Musk — early pre-method work" onerror="this.parentElement.style.display='none'"></a>
+    </div>
+  </div>
+
+  <div class="drawalong">
+    <p><strong>Want to run the loop yourself?</strong> Every episode's lesson PDF is free. If you want to go further with your own reference photo, the <a href="https://pencilprompt.gumroad.com">Custom Color Map</a> is the same AI analysis applied to a photo you choose — the exact colors and sequence for your drawing, your pencil brand.</p>
+    <p class="small">Everything lives at <a href="https://pencilprompt.gumroad.com">pencilprompt.gumroad.com</a>.</p>
+  </div>
 
   <div class="faq">
     <h2>FAQ</h2>
