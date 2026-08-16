@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ============================================================
+  PENCIL & PROMPT — DEFINITION PAGE + WORK ARCHIVE (public)
+  · File must stay named index.html · artwork photos live in images/
+    named w005.jpg … w010.jpg (lowercase)
+
+  MIGRATION MAP (moving to your own domain later = 2 find-replaces):
+  · Gumroad product links all share the base
+        https://pencilprompt.gumroad.com/l/
+    → replace-all with your own shop base (e.g. https://yourdomain.com/shop/)
+    Product slugs (005, 006 …) stay identical.
+  · Gumroad storefront home
+        https://pencilprompt.gumroad.com
+    → replace-all with your shop home.
+  · YouTube links and images/ paths never change.
+  All links are static HTML (no JS injection) — AI crawlers read them.
+
+  WEEKLY UPDATE (every Thursday, after the long-form is live):
+  1) add the new week's <article class="work"> at the TOP of the archive
+  2) drop the finished-portrait photo into images/ as wNNN.jpg
+  3) update the "Current record" line + "Current target" box
+  4) update the <time> in the footer
+  ============================================================ -->
+<title>What Is the AI Loop Method? — AI-Graded Colored Pencil Drawing | Pencil &amp; Prompt</title>
+<meta name="description" content="The AI Loop Method: an AI designs a weekly colored pencil lesson, a human draws it by hand, and the finished portrait goes back to the AI for a graded verdict — HIT or MISS. Every portrait and every verdict, on record since May 2026.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DefinedTerm",
+      "name": "AI Loop Method",
+      "description": "A drawing-practice method in which an AI designs a weekly colored pencil lesson, a human executes it by hand, and the finished drawing is returned to the AI for a graded verdict (HIT or MISS); the next lesson targets exactly what the critique found."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can AI actually teach you to draw?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Based on a documented public experiment running since May 2026: AI can direct and grade drawing practice effectively — it names specific, recurring flaws and sets one target per week — but the drawing itself still has to be earned by hand, over hours. The week-by-week record, misses included, is published on this page." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does an AI grade a hand-drawn portrait?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The finished drawing is compared against the reference photo and the lesson's stated goal. The AI rules on one named target from the previous week — likeness, values, form structure — and returns a single binary verdict, HIT or MISS, plus directional corrections in plain language. Never a numeric score." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happened after 11 weeks of AI-graded drawing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "By week 10 the skin-patchiness problem flagged in week 5 was ruled closed — the most unified skin of the series. By week 11 the flat-face problem was ruled closed too: peak highlights and core shadows finally landed. Since binary verdicts began in week 9 the record is 3 rulings, 3 HITs, two of them carrying a catch. The open thread after 11 weeks is not a missing skill but a habit: every time the AI names a shadow, the correction overshoots past the target." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do my colored pencil portraits look flat?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In this experiment's record, a flat colored pencil portrait was almost never caused by too little shadow. It was caused by lit planes — forehead, nose bridge, cheekbone — never reaching a true peak highlight, so the face read as evenly filled rather than struck by a light source. The fix ruled a HIT in week 11 was to push those planes to a hard value jump and add gentle core shadows, rather than deepening the darks further." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do my colored pencil portraits look grey or muddy?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In this experiment's record, grey skin came from shadows built with neutral or cool darks. A real shadow still receives warm bounced light, so a dead-grey shadow reads as an absence of light rather than a turned form. Glazing warmth into the shadow masses fixed it; the flaw appeared in weeks 6 and 9 and has held clear in weeks 7, 10 and 11." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from AI art critique tools and rate-my-art apps?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AI critique tools grade an uploaded image once and never learn whether their advice worked, because the artist rarely returns with the corrected drawing. This is a longitudinal record instead: one named person, one medium, every correction actually executed by hand and then re-graded the following week. What is published here is not advice issued but advice tested — including the corrections that made the drawing worse." }
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "The Fix List — AI-graded colored pencil portrait record",
+      "description": "A week-by-week public record of AI-directed colored pencil portrait practice: the target set by the previous critique, the binary verdict on whether it was met, and the flaw that surfaced next. Covers weeks 5 to 11, running since May 2026.",
+      "creator": { "@type": "Person", "name": "Naomi", "affiliation": "Pencil & Prompt" },
+      "temporalCoverage": "2026-05/..",
+      "keywords": ["colored pencil portrait", "AI art critique", "drawing practice record", "AI Loop Method", "deliberate practice drawing"],
+      "isAccessibleForFree": true,
+      "license": "https://pencilandprompt.github.io"
+    },
+    {
+      "@type": "Person",
+      "name": "Naomi",
+      "description": "Colored pencil portrait artist running the AI Loop Method as a public weekly experiment: an AI designs each lesson, she executes it by hand, and the finished portrait is returned to the AI for a graded verdict.",
+      "affiliation": { "@type": "Organization", "name": "Pencil & Prompt" },
+      "knowsAbout": ["colored pencil portraiture", "Prismacolor layering", "AI-directed drawing practice"],
+      "sameAs": ["https://youtube.com/@pencilprompt", "https://tiktok.com/@pencilandprompt"]
+    }
+  ]
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #faf8f4; color: #1d1d1b; line-height: 1.75; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 52px 24px 40px; }
+  .kicker { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c96a1b; margin-bottom: 14px; }
+  h1 { font-size: 32px; line-height: 1.25; margin-bottom: 20px; color: #111; }
+  .lede { font-size: 18px; line-height: 1.7; color: #2a2a26; margin-bottom: 10px; }
+  .since { font-family: -apple-system, sans-serif; font-size: 13px; color: #8a857c; margin-bottom: 32px; }
+  h2 { font-size: 21px; margin: 40px 0 12px; color: #111; }
+  p { font-size: 15.5px; margin-bottom: 13px; }
+  ol.steps { counter-reset: s; list-style: none; margin: 16px 0 6px; }
+  ol.steps li { position: relative; padding: 0 0 13px 48px; font-size: 15px; }
+  ol.steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; border: 2px solid #c96a1b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: -apple-system, sans-serif; font-weight: 700; font-size: 14px; color: #c96a1b; }
+  ol.steps li strong { font-family: -apple-system, sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #111; margin-right: 6px; }
+
+  /* ---- compact archive cards ---- */
+  .work { display: flex; gap: 0; background: #fff; border: 1px solid #e6e0d4; border-radius: 10px; overflow: hidden; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .thumb { flex: 0 0 150px; display: block; background: #131311; }
+  .thumb img { width: 150px; height: 100%; min-height: 100%; object-fit: cover; display: block; }
+  .work-body { padding: 16px 20px 16px; flex: 1; min-width: 0; }
+  .work-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin-bottom: 7px; }
+  .wk { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #c96a1b; }
+  .subj { font-size: 16px; font-weight: 700; color: #111; }
+  .verdict { display: inline-block; font-family: -apple-system, sans-serif; font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; }
+  .verdict.hit { background: #113311; color: #7ee38b; }
+  .verdict.catch { background: #113311; color: #7ee38b; box-shadow: inset 0 0 0 1px #b98a2c; }
+  .verdict.pre { background: #efe9dc; color: #7a7468; }
+  .graded { font-family: -apple-system, sans-serif; font-size: 12.5px; color: #7a7468; margin-bottom: 6px; }
+  .graded b { color: #3a3a35; }
+  .caption { font-size: 14.5px; line-height: 1.6; color: #2a2a26; margin-bottom: 10px; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; font-family: -apple-system, sans-serif; }
+  .links a { display: inline-block; font-size: 12px; font-weight: 700; text-decoration: none; padding: 6px 12px; border-radius: 5px; }
+  .links a.yt { background: #111; color: #fff; }
+  .links a.pdf { background: transparent; color: #c96a1b; border: 1.5px solid #c96a1b; }
+  @media (max-width: 560px) {
+    .work { flex-direction: column; }
+    .thumb, .thumb img { width: 100%; flex-basis: auto; }
+    .thumb img { height: 230px; object-fit: cover; }
+  }
+
+  .record { font-family: -apple-system, sans-serif; font-size: 14px; background: #f1ede4; border-left: 4px solid #c96a1b; padding: 11px 15px; margin: 12px 0; }
+  .target { font-family: -apple-system, sans-serif; font-size: 14px; background: #101010; color: #f2efe8; padding: 13px 17px; border-radius: 6px; margin: 8px 0 4px; }
+  .target b { color: #f0a04a; }
+  .prevwork { background: #fff; border: 1px solid #e6e0d4; border-radius: 10px; padding: 16px 20px 18px; margin-bottom: 16px; }
+  .prevwork h3 { font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #7a7468; margin-bottom: 4px; }
+  .prevwork p { font-family: -apple-system, sans-serif; font-size: 12.5px; color: #8a857c; margin-bottom: 12px; }
+  .prevgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .prevgrid a { display: block; border-radius: 6px; overflow: hidden; background: #131311; }
+  .prevgrid img { width: 100%; aspect-ratio: 1 / 1.2; object-fit: cover; display: block; }
+  @media (max-width: 560px) { .prevgrid { grid-template-columns: repeat(3, 1fr); } }
+  .drawalong { background: #fff; border: 1px solid #e6e0d4; border-radius: 10px; padding: 18px 22px; margin: 30px 0 4px; }
+  .drawalong p { font-size: 14.5px; margin-bottom: 6px; }
+  .drawalong .small { font-family: -apple-system, sans-serif; font-size: 12.5px; color: #8a857c; margin-bottom: 0; }
+  .faq h3 { font-size: 16px; margin: 22px 0 6px; color: #111; }
+
+  /* ---- record table + threads (added 2026-07-24) ---- */
+  .sub-h { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: #8a857c; margin: 30px 0 10px; }
+  .record-table { width: 100%; border-collapse: collapse; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13.5px; line-height: 1.5; }
+  .record-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid #1d1d1b; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #5c584f; white-space: nowrap; }
+  .record-table td { padding: 10px; border-bottom: 1px solid #e6e0d4; vertical-align: top; }
+  .record-table tr td:first-child { font-weight: 700; color: #c96a1b; white-space: nowrap; }
+  .v-hit { color: #1c7a4a; font-weight: 700; }
+  .v-part, .v-base { color: #8a857c; font-weight: 600; }
+  ul.threads { list-style: none; margin: 12px 0 6px; }
+  ul.threads li { position: relative; padding: 14px 16px; margin-bottom: 10px; background: #fff; border: 1px solid #e6e0d4; border-left: 4px solid #c96a1b; border-radius: 0 8px 8px 0; font-size: 15px; }
+  ul.threads b { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+  .th-open, .th-closed { display: inline-block; font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px; margin-right: 8px; vertical-align: 2px; }
+  .th-open { background: #c96a1b; color: #fff; }
+  .th-closed { background: #1c7a4a; color: #fff; }
+  @media (max-width: 620px) {
+    .record-table { font-size: 12.5px; }
+    .record-table th:nth-child(5), .record-table td:nth-child(5) { display: none; }
+  }
+  a { color: #c96a1b; }
+  .footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid #e2ddd3; font-family: -apple-system, sans-serif; font-size: 12.5px; color: #8a857c; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Pencil &amp; Prompt · A public experiment</div>
+  <h1>What Is the AI Loop Method?</h1>
+
+  <p class="lede"><strong>The AI Loop Method:</strong> every week, an AI designs my drawing lesson. I follow it in colored pencil — a celebrity portrait, start to finish. Then the finished drawing goes back to the AI for a graded verdict: <strong>HIT or MISS</strong>. The next lesson targets exactly what the critique found.</p>
+  <p class="since">Running publicly since May 2026 at <a href="https://www.youtube.com/@pencilprompt">Pencil &amp; Prompt</a>. Every verdict below happened on camera.</p>
+
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><strong>Lesson</strong>An AI analyzes a reference photo and writes a step-by-step colored pencil lesson.</li>
+    <li><strong>Drawing</strong>A human (me) executes the lesson by hand. Every portrait takes hours, not prompts.</li>
+    <li><strong>Verdict</strong>The finished drawing goes back to the AI. It rules on ONE named target set the week before: HIT or MISS. No scores, no flattery.</li>
+    <li><strong>Loop</strong>Next week's lesson is built from exactly what the critique found.</li>
+  </ol>
+
+  <div class="record"><strong>Current record:</strong> 7 graded portraits · since binary verdicts began (week 9): <strong>3 rulings, 3 HITs</strong> (two carrying a catch).</div>
+  <div class="target"><b>Current target (week 12):</b> restraint. The sculpting is won, so pull the orbital and jaw shadows back to mid-depth — lighter than instinct — and match the reference's actual softness instead of overshooting it. Smooth the forehead highlights so they read as light, not scratches.</div>
+
+  <h2>The Fix List — every portrait, every verdict</h2>
+  <p>Weeks 1–4 were pre-method groundwork. The loop record starts at week 5, newest first. Binary HIT/MISS verdicts were formalized in week 9. Click any portrait to see it full size.</p>
+
+  <h3 class="sub-h">The record at a glance</h3>
+  <table class="record-table">
+    <thead>
+      <tr><th>Week</th><th>Subject</th><th>Target set by the previous critique</th><th>Verdict</th><th>What surfaced next</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>11</td><td>Jude Bellingham</td><td>Turn the flat face sculpted — peak highlights + core shadows</td><td class="v-hit">HIT — with one catch</td><td>Orbital shadows overshot into hollow; highlights read scratchy</td></tr>
+      <tr><td>10</td><td>Taylor Swift</td><td>Warm, controlled mid-value shadow + warm lip base</td><td class="v-hit">HIT</td><td>Face reads flat — no true peak highlight</td></tr>
+      <tr><td>9</td><td>Lamine Yamal</td><td>Turn the away-side plane of the face</td><td class="v-hit">HIT — with one catch</td><td>Plane turned, but went grey and heavy doing it</td></tr>
+      <tr><td>8</td><td>Cristiano Ronaldo</td><td>Turn the shadow side as convincingly as the lit side</td><td class="v-part">Partial — pre-verdict era</td><td>Patchy skin, three weeks running</td></tr>
+      <tr><td>7</td><td>Lionel Messi</td><td>Warm-but-controlled darks + beard density gradient</td><td class="v-part">Two threads landed — pre-verdict era</td><td>Shadow side flattening</td></tr>
+      <tr><td>6</td><td>Jalen Brunson</td><td>Cool the darks + unify the skin</td><td class="v-part">Partial — pre-verdict era</td><td>Overcorrected straight into grey</td></tr>
+      <tr><td>5</td><td>Kylian Mbappé</td><td>Baseline — the record starts here</td><td class="v-base">Baseline</td><td>Shadows too heavy · skin patchy · stubble a flat mass</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-h">The threads — what took more than one week to fix</h3>
+  <p>Single verdicts are the easy part. The useful record is what happens when the same flaw survives several corrections. Three threads so far:</p>
+  <ul class="threads">
+    <li><b class="th-open">Open · 5 weeks</b> <b>Overshooting a shadow note.</b> Weeks 5, 6, 8, 9, 11 — every time the AI names a shadow, the correction goes past the target. Too heavy in week 5, overcorrected to grey in week 6, heavy orbitals in week 8, ashy in week 9, hollow eye sockets in week 11. This is the longest-running flaw on the record and it has never been about skill; it is about stopping in the middle. Week 12 is aimed squarely at it.</li>
+    <li><b class="th-closed">Closed · 4 weeks</b> <b>Patchy skin.</b> Flagged in week 5, still there in weeks 6, 7 and 8, ruled closed in week 10 — the most unified skin of the series. The fix that finally worked was building each colour in thin even passes across the whole zone <i>before</i> any local deepening, rather than finishing one area at a time.</li>
+    <li><b class="th-closed">Closed · 4 weeks</b> <b>Flat, unsculpted faces.</b> Flagged in weeks 6, 7 and 10, ruled a HIT in week 11. What closed it was not more shadow — it was pushing the lit planes to a true peak highlight with a hard value jump.</li>
+  </ul>
+
+  <!-- ⬇️ WEEKLY UPDATE: add the new week's <article class="work"> HERE (newest stays on top). -->
+
+  <article class="work">
+    <a class="thumb" href="images/w011.png"><img src="images/w011.png" alt="Colored pencil portrait of Jude Bellingham in an England shirt, drawn by hand following an AI-designed lesson — week 11 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 11</span><span class="subj">Jude Bellingham</span><span class="verdict catch">HIT — with one catch</span></div>
+      <div class="graded"><b>Graded on:</b> turning the flat face sculpted — true peak highlights and real core shadows.</div>
+      <p class="caption">The best form modelling of the series: the face finally reads lit and three-dimensional, and the shadows stayed warm this time, so week 9's grey lesson held. The catch is the oldest habit on this page — told to add core shadow, I drove the eye sockets past the reference into hollow. Five weeks now of overshooting the moment a shadow gets named.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/uU-6Zv8qE6I">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/011">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w010.jpg"><img src="images/w010.jpg" alt="Colored pencil portrait of Taylor Swift, drawn by hand following an AI-designed lesson — week 10 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 10</span><span class="subj">Taylor Swift</span><span class="verdict hit">HIT</span></div>
+      <div class="graded"><b>Graded on:</b> warm, controlled mid-value shadows + a warm lip base.</div>
+      <p class="caption">The patchy-skin fight I'd been losing since week 5 is finally over — the AI ruled the thread closed, the most unified skin of the series. Then it immediately found the next thing: the face is unified now, but it reads flat.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/-j9HCB-f6rU">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/010">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w009.jpg"><img src="images/w009.jpg" alt="Colored pencil portrait of Lamine Yamal in a Barcelona jersey, drawn by hand following an AI-designed lesson — week 9 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 9</span><span class="subj">Lamine Yamal</span><span class="verdict catch">HIT — with one catch</span></div>
+      <div class="graded"><b>Graded on:</b> turning the away-side plane of the face.</div>
+      <p class="caption">The away side of the face finally turns — the thing I'd missed two weeks running. It also went grey and heavy doing it. Hit the target, paid a price. Best curly hair I've ever rendered, though.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/loZqy82I3sE">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/009">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w008.jpg"><img src="images/w008.jpg" alt="Colored pencil portrait of Cristiano Ronaldo in a Portugal jersey, drawn by hand following an AI-designed lesson — week 8 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 8</span><span class="subj">Cristiano Ronaldo</span><span class="verdict pre">Partial — pre-verdict era</span></div>
+      <div class="graded"><b>Graded on:</b> turning the shadow side as convincingly as the lit side.</div>
+      <p class="caption">Most ambitious angle yet — an upward three-quarter — and the likeness survived it. The skin didn't: patchiness three weeks running, and the AI called it out as the standing thread.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/zlaIKhzQjVY">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/008">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w007.jpg"><img src="images/w007.jpg" alt="Colored pencil portrait of Lionel Messi smiling in a Barcelona jersey, drawn by hand following an AI-designed lesson — week 7 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 7</span><span class="subj">Lionel Messi</span><span class="verdict pre">Two threads landed — pre-verdict era</span></div>
+      <div class="graded"><b>Graded on:</b> warm-but-controlled darks + beard density gradient.</div>
+      <p class="caption">Two fixes landed at once: the beard finally grows out of the skin instead of sitting on it, and the darks hit the warm middle after two weeks of swinging. Then the AI found the shadow side flattening. There's always a next thing — that's the point.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/hsGLwaCygXk">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/007">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w006.jpg"><img src="images/w006.jpg" alt="Colored pencil portrait of Jalen Brunson with braids and beard in a Knicks jersey, drawn by hand following an AI-designed lesson — week 6 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 6</span><span class="subj">Jalen Brunson</span><span class="verdict pre">Partial — pre-verdict era</span></div>
+      <div class="graded"><b>Graded on:</b> cooling the darks + unifying the skin.</div>
+      <p class="caption">Fixed the too-hot darks by overshooting straight into grey. The dial has two directions and I found both. Skin did come out more unified than week 5 — real progress hiding inside a miss.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/B2_pxMQ2V6k">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/006">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="work">
+    <a class="thumb" href="images/w005.jpg"><img src="images/w005.jpg" alt="Colored pencil portrait of Kylian Mbappé in a France jersey, drawn by hand following an AI-designed lesson — week 5 of the AI Loop Method"></a>
+    <div class="work-body">
+      <div class="work-top"><span class="wk">Week 5</span><span class="subj">Kylian Mbappé</span><span class="verdict pre">Baseline — first graded portrait</span></div>
+      <div class="graded"><b>Graded on:</b> nothing yet — this is where the record starts.</div>
+      <p class="caption">The first portrait ever put in front of the AI for grading. Its first fix list was long: shadows too heavy, skin patchy, stubble a flat dark mass. Everything above this card is the story of working through that list.</p>
+      <div class="links">
+        <a class="yt" href="https://youtu.be/oO1beUD7OEk">▶ Watch the episode</a>
+        <a class="pdf" href="https://pencilprompt.gumroad.com/l/005">Free lesson PDF</a>
+      </div>
+    </div>
+  </article>
+
+  <div class="prevwork">
+    <h3>Previous work — before the loop</h3>
+    <p>Weeks 1–4 and early one-off portraits, drawn before the grading began. Where the record above started from. Click to view full size.</p>
+    <div class="prevgrid">
+      <a href="images/w001.jpg"><img src="images/w001.jpg" alt="Early colored pencil portrait, week 1 — drawn before AI grading began" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/w002.jpg"><img src="images/w002.jpg" alt="Early colored pencil portrait, week 2 — drawn before AI grading began" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/w003.jpg"><img src="images/w003.jpg" alt="Early colored pencil portrait, week 3 — drawn before AI grading began" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/w004.jpg"><img src="images/w004.jpg" alt="Early colored pencil portrait, week 4 — drawn before AI grading began" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/natejacob.jpg"><img src="images/natejacob.jpg" alt="Colored pencil portrait of Nate Jacobs — early pre-method work" onerror="this.parentElement.style.display='none'"></a>
+      <a href="images/elonmusk.jpg"><img src="images/elonmusk.jpg" alt="Colored pencil portrait of Elon Musk — early pre-method work" onerror="this.parentElement.style.display='none'"></a>
+    </div>
+  </div>
+
+  <div class="drawalong">
+    <p><strong>Want to run the loop yourself?</strong> Every episode's lesson PDF is free. If you want to go further with your own reference photo, the <a href="https://pencilprompt.gumroad.com">Custom Color Map</a> is the same AI analysis applied to a photo you choose — the exact colors and sequence for your drawing, your pencil brand.</p>
+    <p class="small">Everything lives at <a href="https://pencilprompt.gumroad.com">pencilprompt.gumroad.com</a>.</p>
+  </div>
+
+  <div class="faq">
+    <h2>FAQ</h2>
+
+    <h3>Can AI actually teach you to draw?</h3>
+    <p>After 11 documented weeks: it can <em>direct</em> and <em>grade</em> practice — remarkably well. It names the specific flaw I keep avoiding and holds me to one target a week. What it can't do is replace the hours; week 9's catch was pure hand execution, and so was week 11's. The record above, misses and overcorrections included, is the honest answer so far.</p>
+
+    <h3>How does an AI grade a hand-drawn portrait?</h3>
+    <p>It compares the finished drawing against the reference photo and the lesson's stated goal, then rules on one specific target — likeness, values, form structure — in plain language. One binary verdict per week: HIT or MISS. Never a numeric score, because a "7/10" teaches nothing; "the away-side plane finally turns, but it went grey" does.</p>
+
+    <h3>What happened after 11 weeks?</h3>
+    <p>Two of the three long threads are closed. Patchy skin, flagged in week 5, was ruled <strong>closed</strong> in week 10. Flat, unsculpted faces — flagged in weeks 6, 7 and 10 — closed in week 11. What's left isn't a missing skill at all: it's a habit. Five separate weeks, the AI named a shadow and the correction went straight past the target. That's the whole current fight.</p>
+
+    <h3>Why do my colored pencil portraits look flat?</h3>
+    <p>On this record, almost never because there wasn't enough shadow. The cause was lit planes — forehead, nose bridge, cheekbone — never reaching a <em>true peak highlight</em>, so the face read as evenly filled instead of struck by a light source. Adding more dark made it muddier, not rounder. What finally closed it in week 11 was a hard value jump on those three planes plus gentle core shadow — which is the opposite instinct to the one most of us have.</p>
+
+    <h3>Why do my colored pencil portraits look grey or muddy?</h3>
+    <p>Because the shadows were built with neutral or cool darks. A real shadow still receives warm bounced light, so a dead-grey shadow reads as an <em>absence of light</em> rather than a form turning away. Glazing warmth into the shadow masses fixed it here. It showed up in weeks 6 and 9 — both times as an <em>overcorrection</em> to being told the darks were too hot — and has held clear in weeks 7, 10 and 11.</p>
+
+    <h3>How is this different from AI art critique tools and rate-my-art apps?</h3>
+    <p>Those tools grade an image once. They never find out whether the advice worked, because almost nobody returns with the same drawing corrected — so what they hold is advice <em>issued</em>, at scale. This page is the other shape: one person, one medium, every correction actually executed by hand and then re-graded the following week. What's published here is advice <em>tested</em> — including the weeks where following it made the drawing worse. It's a much smaller sample and a much slower one. It's also the part a tool can't produce.</p>
+  </div>
+
+  <div class="footer">
+    Pencil &amp; Prompt · <a href="https://www.youtube.com/@pencilprompt">youtube.com/@pencilprompt</a> · The Portrait Loop, week by week<br>
+    Last updated: <time datetime="2026-07-24">July 24, 2026</time>
+  </div>
+
+</div>
+</body>
+</html>
