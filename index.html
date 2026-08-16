@@ -58,13 +58,19 @@ h3{font-size:20px;color:#fff;margin:26px 0 8px}
 .pn{display:flex;justify-content:space-between;gap:16px;margin:44px 0 0;padding-top:22px;border-top:1px solid var(--ln);font-size:14px}
 footer{border-top:1px solid var(--ln);margin-top:76px;padding:30px 0 60px;color:var(--mu);font-size:13px}
 .note{color:var(--mu);font-size:14px}
+.checks{display:grid;gap:14px}
+.check{background:var(--pn);border:1px solid var(--ln);border-left:3px solid var(--gd);border-radius:10px;padding:18px 20px}
+.chk-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.chk-n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--gd);color:var(--gd);font-size:13px;font-weight:800;flex-shrink:0}
+.chk-q{font-size:18px;color:#fff;font-weight:600;margin-bottom:10px;line-height:1.4}
+.chk-l{font-size:15px;color:#cfc9bb;margin-bottom:7px;line-height:1.65}
 details{border:1px solid var(--ln);border-radius:10px;padding:14px 18px;margin:10px 0;background:var(--pn)}
 summary{cursor:pointer;color:#fff;font-weight:600}
 </style>
 </head><body>
 <header><div class="w">
   <a class="brand" href="index.html">Pencil <span>&amp;</span> Prompt</a>
-  <nav><a href="index.html#work">The work</a><a href="index.html#how">How it works</a><a href="https://www.youtube.com/channel/UCkN0uZnyvIMXwSzCBIGJA2g">YouTube</a></nav>
+  <nav><a href="index.html#work">The work</a><a href="rubric.html">The rubric</a><a href="index.html#how">How it works</a><a href="https://www.youtube.com/channel/UCkN0uZnyvIMXwSzCBIGJA2g">YouTube</a></nav>
 </div></header>
 <main class="w">
 <div class="hero">
@@ -160,6 +166,13 @@ Click any portrait for its verdict and its PDF.</p>
     <div class="nm"><a href="work/w005.html" style="color:#fff">Kylian Mbappé</a></div>
     <div class="foot"><span class="badge pending">LOGGED</span><span class="chip pdf">Free PDF guide</span><a class="chip yt" href="https://youtu.be/oO1beUD7OEk" target="_blank" rel="noopener" title="Watch this episode on YouTube">&#9654; Watch</a></div>
   </div></article></div>
+
+
+<h2 id="rubric">Grade your own drawing</h2>
+<p class="note" style="margin-bottom:18px;max-width:52em">The recurring findings from every critique above, deduplicated into
+<b style="color:#cfc9bb">eight pass/fail checks</b> you can hold your own portrait against &mdash; value, temperature, edge, structure,
+unification, calibration, saturation, texture. Not a score out of ten: a 7/10 teaches nothing.</p>
+<div class="btnrow" style="margin-bottom:10px"><a class="dl" href="rubric.html">The 8-Check Portrait Rubric &rarr;</a></div>
 
 <h2>Before the loop</h2>
 <p class="note" style="margin-bottom:20px">The early work, kept up on purpose. This is what the drawings looked like before an AI started grading them.</p>
