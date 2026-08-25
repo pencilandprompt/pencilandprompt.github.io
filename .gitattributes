@@ -1,0 +1,10 @@
+# Never let git diff or merge these as text.
+# 2026-08-25: w016.pdf contained no NUL bytes, so git guessed "text" and a
+# merge wrote <<<<<<< conflict markers straight into the PDF, corrupting it.
+*.pdf binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.mp4 binary
