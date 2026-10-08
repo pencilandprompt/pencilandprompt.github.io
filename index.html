@@ -228,7 +228,21 @@ Click any portrait for its verdict and its PDF.</p>
     <div class="foot"><span class="badge pending">LOGGED</span><span class="chip pdf">Free PDF guide</span><a class="chip yt" href="https://youtu.be/oO1beUD7OEk" target="_blank" rel="noopener" title="Watch this episode on YouTube">&#9654; Watch</a></div>
   </div></article></div>
 
-
+<div class="panel" id="msg-home">
+  <div class="lbl">Leave a message</div>
+  <p class="note" style="margin-bottom:12px">Drew along, got stuck, or want to tell me what went wrong?
+  Write it here and I read all of them. Nothing is gated behind this &mdash; the guide above is already free.</p>
+  <form class="msgform" data-endpoint="https://formspree.io/f/xkjojqgb" data-ctx="home">
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+           style="position:absolute;left:-9999px;width:1px;height:1px">
+    <input type="text" name="name" placeholder="Name (optional)" autocomplete="name">
+    <input type="email" name="email" placeholder="Email (optional &mdash; only so I can reply)" autocomplete="email">
+    <textarea name="message" rows="4" required placeholder="What happened when you tried it?"></textarea>
+    <input type="hidden" name="page" value="home">
+    <button type="submit">Send</button>
+    <span class="msgstate" role="status"></span>
+  </form>
+</div>
 
 
 <h2 id="rubric">Grade your own drawing</h2>
@@ -307,4 +321,26 @@ unification, calibration, saturation, texture. Not a score out of ten: a 7/10 te
 </div></footer>
 <script data-goatcounter="https://pencilandprompt.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<script>
+document.querySelectorAll('form.msgform').forEach(function(f){
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (f.querySelector('[name=_gotcha]').value) return;          /* bot */
+    var st = f.querySelector('.msgstate'), btn = f.querySelector('button');
+    btn.disabled = true; st.textContent = 'Sending…';
+    fetch(f.dataset.endpoint, {
+      method: 'POST', headers: {'Accept': 'application/json'}, body: new FormData(f)
+    }).then(function(r){
+      if (!r.ok) throw new Error(r.status);
+      f.innerHTML = '<p class="note" style="margin:0"><b style="color:#cfc9bb">Got it — thank you.</b><br>I read every one of these.</p>';
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({path:'message-sent', title:'Message sent', event:true});
+      }
+    }).catch(function(){
+      btn.disabled = false;
+      st.textContent = 'That did not send. Try again, or reply in the YouTube comments.';
+    });
+  });
+});
+</script>
 </body></html>
